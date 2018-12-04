@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Author @ Paul Biocco -->
+    <meta charset="utf-8">
+    <title>Demo Dynamic Div creation</title>
+  </head>
+
+ <script type="text/javascript" src="Assets/AnimalLoader.js" ></script>
+
+  <body>
+
+    <!-- Top section of site. Will contain the chooser -->
+    <div id = "pickerArea">
+      <h3>Use the thingie to pick an animal!</h3>
+
+      <select id="animalChooser" oninput ="getAnimalDesc()" >
+        <option value="default">Choose an animal!</option>
+        <option value="dog">Dog</option>
+        <option value="duck">Duck</option>
+        <option value="fish">Fish</option>
+        <option value="giraffe">Giraffe</option>
+        <option value="lion">Lion</option>
+        <option value="octopus">Octopus</option>
+        <option value="snake">Snake</option>
+        <option value="swan">Swan</option>
+        <option value="tiger">Tiger</option>
+        <option value="turtle">Turtle</option>
+      </select>
+
+    </div>
+
+    <!-- Bottom section will contain an image -->
+
+    <h3 id ="animalInfoArea">
+
+    </h3>
+
+  </body>
+</html>
