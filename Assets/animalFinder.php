@@ -1,11 +1,8 @@
 <?php
+   //Author @ Paul Biocco
+
    include 'database.php'; //Link to database file.
 
-   if(isset($_GET['animalID'])){
-      $id = $_GET['animalID'];  // ID pulled through ajax
-      echo "cat" . $id;
-    }
-   else
       $id = mysqli_real_escape_string($conn, $_POST['animalID']);
 
    //Query Animal

@@ -1,4 +1,5 @@
 <?php
+    //Author @ Paul Biocco
     //Database details
 
     $dbServername = "localhost";
