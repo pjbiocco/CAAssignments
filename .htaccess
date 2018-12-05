@@ -1,0 +1,12 @@
+#Turning rewrite engine on
+
+RewriteEngine on
+
+#Rewrite to clean URL to hide php query
+
+RewriteCond %{THE_REQUEST} !(?:css|js)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^([0-9]+) index.php?animalID=$1 [QSA,L]

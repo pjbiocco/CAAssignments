@@ -65,3 +65,30 @@ function getAnimalDesc(){
     document.getElementById("infoContainer").innerHTML =  "<h4 id = 'infoText'>" + animalDesc + " </h4>";
 
 }
+
+function loadAnimalInfo(id){ //Getting Animal's ID
+
+  $.ajax(
+     {
+
+         data: {animalID:id},
+         url: "/Assets/animalFinder.php",
+         method: "POST",
+         error: function(res, textStatus, errorThrown)  {
+           console.log(textStatus, errorThrown);
+           console.log("Error in loadAnimalInfo()");
+         },
+         success: function(response) {
+             console.log(response);
+             if(response == "invalidEntry"){
+                  alert("This is not a valid animal ID. Please try again");
+             }else{
+             animalInfo = JSON.parse(response);
+             document.getElementById("animalInfoArea").innerHTML = response;
+
+            }
+         }
+
+     }
+  );
+}
