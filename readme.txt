@@ -7,5 +7,4 @@ Set up instructions
 2. Download "animal.sql" and use phpMyAdmin at the location previously mention to import the table.
 3. Download all appropriate files for the project and place them in the "htdocs" folder within your XAMPP folder.
 4. To set an open port to 3000, go to the XAMPP control panel, click the "Config" in the top right corner above the "NetStats" button.
-   Then click "Service and Port settings." Adjust the port by changing the main port (default set to 80) to 3000, or whatever number desired. 
-5.
+   Then click "Service and Port settings." Adjust the port by changing the main port (default set to 80) to 3000, or whatever number desired.
