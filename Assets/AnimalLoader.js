@@ -1,8 +1,12 @@
-//Get animal name
+//Declare variables
+var animalDesc;                                                  //Animal description
+var animalImgName;                                               //Image file name
+var animalName;                                                  //Animal name
+var animalID;
+
 function getAnimalDesc(){
     var animalName = document.getElementById('animalChooser').value; //Animal name
-    var animalDesc;                                                  //Animal description
-    var animalImgName;                                               //Image file name
+
 
     //Sets the information based off of the drop down box.
     if(animalName == "default" ){
@@ -46,7 +50,7 @@ function getAnimalDesc(){
       animalImgName = "Assets/tiger.png";
     }
     else if(animalName == "turtle"){
-      animalDesc = "Turtles are diapsids of the order Testudines characterized by a special bony or cartilaginous shell developed from their ribs and acting as a shield. "Turtle" may refer to the order as a whole or to fresh-water and sea-dwelling testudines. The order Testudines includes both extant and extinct species";
+      animalDesc = "Turtles are diapsids of the order Testudines characterized by a special bony or cartilaginous shell developed from their ribs and acting as a shield. &quot;Turtle&quot; may refer to the order as a whole or to fresh-water and sea-dwelling testudines. The order Testudines includes both extant and extinct species";
       animalImgName = "Assets/turtle.png";
     }
 
@@ -59,9 +63,5 @@ function getAnimalDesc(){
     document.getElementById("animalInfoArea").innerHTML +=  "<div id = 'infoContainer'></div>";
     document.getElementById("imageContainer").innerHTML = "<img src="+ animalImgName+ " alt='animalName'>";
     document.getElementById("infoContainer").innerHTML =  "<h4 id = 'infoText'>" + animalDesc + " </h4>";
-
-
-
-
 
 }
